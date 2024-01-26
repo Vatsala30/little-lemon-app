@@ -1,6 +1,9 @@
+import Hero from "./Hero";
+import Specials from "./Specials";
 function Main(){
     return <main>
-        <p>This is main sectiion</p>
+        <Hero/>
+        <Specials/>
     </main>
 }
 
