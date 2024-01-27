@@ -1,6 +1,6 @@
 import ReserveTable from './ReserveTable';
 
-function Hero(){
+function CallToAction(){
     return (
         <section id="hero">
             <article id="about">
@@ -19,4 +19,4 @@ function Hero(){
     );
 }
 
-export default Hero;
+export default CallToAction;

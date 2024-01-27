@@ -1,4 +1,4 @@
-function Testimonials(){
+function CustomerSays(){
 
     return(
         <section id="testimonials">
@@ -52,4 +52,4 @@ function Testimonials(){
 
 }
 
-export default Testimonials;
+export default CustomerSays;
