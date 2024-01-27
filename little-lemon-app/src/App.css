@@ -13,27 +13,25 @@ header{
   grid-area: head;
   background-color: white;
   height: 10vh;
-  width: 20vw;
   
 }
 
-#icon{
+header > .icon{
   justify-self: end;
-  width: 100%;
+  width: inherit;
   
 }
 
-#icon > img{
-  display: grid;
-  margin-left: auto;
-  width: 50%;
+header > .icon img{
+  display: block;
+  margin: auto;
+  width: inherit;
 }
 
 nav{
   height: 10vh;
   grid-area: nav;
   background-color: #ffffff;
-  width: 80vw;
   
   }
 
@@ -53,6 +51,10 @@ nav a{
   text-decoration: none;
 }
 
+nav a:hover{
+  color: #495E57;
+}
+
 
 main{
   grid-area: main;
@@ -60,12 +62,7 @@ main{
   width: 100vw;
   }
 
-footer{
-  grid-area: footer;
-  background-color: red;
-  height: 20vh;
-  width: 100vw;
-}  
+
 
 #hero{
   background-color: #495E57;
@@ -74,6 +71,8 @@ footer{
   grid-template-rows: 2fr 1fr;
   height: 50vh;
   width: 100vw;
+  margin-top:0%;
+  margin-bottom: 0%;
   
 }
 
@@ -93,14 +92,14 @@ footer{
 #about h3{
   color: #FFFFFF;
   font-size: 3vw;
-  margin: 0px;
+  margin: 0%;
 }
 
 #about p{
   color: #FFFFFF;
   font-size: 1.5vw;
   text-align: left;
-  margin: 0px;
+  margin: 0%;
 }
 
 #restaurant-food{
@@ -132,6 +131,266 @@ footer{
   
 
 }
+
+#specials{
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0%;
+  margin-bottom: 0%;
+  background-color: white;
+  height: 70vh;
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  grid-template-rows: 0.25fr 2fr;
+  grid-template-areas: "heading heading heading"
+                       "greek-salad bruchetta lemon-dessert";
+
+}
+
+#specials > h1{
+  grid-area: heading;
+}
+
+.dish{
+  height: 55vh;
+  width:90%;
+  margin: auto;
+  background-color: #EDEFEE;
+  border-radius: 5%;
+
+}
+
+.dish-img{
+  height: 20vh;
+  width:100%;
+  border-radius: 5%;
+
+}
+
+
+.dish-img > img {
+  height: 100%;
+  width: 100%;
+  border-radius: 5%;
+
+}
+
+.greek-salad{
+  grid-area: greek-salad;
+}
+
+
+.bruchetta{
+  grid-area: bruchetta;
+
+  }
+
+.lemon-dessert{
+  grid-area: lemon-dessert;
+}
+
+.dish-dsp{
+  height: 35vh;
+  width:100%;
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  grid-template-rows: 1fr, 3fr;
+}
+
+.dish-dsp .name{
+  grid-column: 1/ span 1;
+  grid-row: 1/ span 1;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 0px;
+}
+
+.dish-dsp .price{
+  grid-column: 2/ span 1;
+  grid-row: 1/ span 1;
+  color: #EE9972;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 0px;
+}
+
+.dish-dsp p{
+  grid-column: 1/ span 2;
+  grid-row: 2/ span 1;
+  margin-top: 0px;
+  text-align: left;
+  font-size: 80%;
+  margin-left: 5%;
+  margin-right: 5%;
+  overflow:auto;
+  color: #495E57;
+  font-weight: bold;
+}
+
+.dish:hover {
+  
+  box-shadow: 0 10px 10px #F4CE14;
+}
+
+#testimonials{
+  width: 100%;
+  background-color: white;
+  height: 50vh;
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  margin-top: 0%;
+  margin-bottom: 0%;
+}
+
+.customer{
+  height: 35vh;
+  width:98%;
+  margin: auto;
+  background-color: #F4CE14;
+  border-radius: 2%
+  ;
+
+}
+
+.customer:hover {
+  
+  box-shadow: 0 10px 10px #495E57;
+}
+
+.cone{
+  grid-column: 1/ span 1;
+}
+
+.ctwo{
+  grid-column: 2/ span 1;
+}
+
+.cthree{
+  grid-column: 3/ span 1;
+}
+
+.cfour{
+  grid-column: 4/ span 1;
+}
+
+.customer-img{
+  height: 20vh;
+  width:50%;
+  border-radius: 100%;
+  margin: auto;
+  margin-top: 5%;
+
+}
+
+
+.customer-img > img {
+  height: 100%;
+  width: 100%;
+  border-radius: 100%;
+
+}
+
+.customer-review{
+  height: 15vh;
+  width:100%;
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  grid-template-rows: 1fr, 1fr;
+}
+
+.customer-review .name{
+  grid-column: 1/ span 1;
+  grid-row: 1/ span 1;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 0px;
+  color: #495E57;
+  font-weight: bold;
+  font-family: cursive;
+  font-size: 100%;
+}
+
+.customer-review .ratings{
+  grid-column: 2/ span 1;
+  grid-row: 1/ span 1;
+  color: #495E57;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 0px;
+  font-weight: bold;
+}
+
+.customer-review p{
+  grid-column: 1/ span 2;
+  grid-row: 2/ span 1;
+  margin-top: 0px;
+  font-size: 80%;
+  margin-left: 5%;
+  margin-right: 5%;
+  color: #495E57;
+  font-weight: bold;
+  font-family:cursive;
+  overflow:auto;
+}
+
+
+footer{
+  grid-area: footer;
+  background-color: #495E57;
+  height: 20vh;
+  width: 100vw;
+  grid-template-columns: repeat(12,1fr);
+  grid-template-rows: repeat(4,1fr);
+  display:grid;
+}  
+
+footer> .icon{
+  display: grid;
+  grid-column: 2/ span 4 ;
+  grid-row: 2/span 2;
+  
+}
+
+footer > .contact-us{
+  display: grid;
+  grid-column: 7/ span 3 ;
+  grid-row: 2/span 2;
+  
+}
+
+footer > .social-media{
+  display: grid;
+  grid-column: 10/ span 3 ;
+  grid-row: 2/span 2;
+  
+}
+
+footer > .icon img{
+  margin: auto;
+  width: inherit;
+}
+
+footer a{
+  font-size: 1vw;
+  font-weight: bold;
+  color: white;
+  text-decoration: none;
+}
+
+footer li{
+  font-size: 1vw;
+  font-weight: bold;
+  color: white;
+  text-decoration: none;
+}
+
+footer ul{
+  list-style: none;
+}
+
+
+
 
 
 
