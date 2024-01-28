@@ -1,6 +1,6 @@
 function Header(){
     return <header>
-        <div class="icon">
+        <div className="icon">
         <img src={require('./images/Icon.png')} alt="icon" />
         </div>
     </header>

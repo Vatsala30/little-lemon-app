@@ -2,7 +2,7 @@ import {Link } from "react-router-dom";
 
 
 function Nav(){
-    return <nav>
+    return <nav role = "search">
          <Link to="/" className="nav-item">HOME</Link>
         <Link to="/about" className="nav-item">ABOUT</Link>
         <Link to="/menu" className="nav-item">MENU</Link>
