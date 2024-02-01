@@ -8,7 +8,7 @@ function CustomerSays(){
                 </div>
                 <div className="customer-review cone-review">
                     <h5 className="name">Andrew</h5>
-                    <h5 className="ratings">5 <span className="star">&#9734;</span></h5>
+                    <h5 className="ratings">5 ⭐</h5>
                     <p><q>I love the ambience of this place.</q></p>
     
                 </div>
@@ -19,7 +19,7 @@ function CustomerSays(){
                 </div>
                 <div className="customer-review ctwo-review">
                     <h5 className="name">Emma</h5>
-                    <h5 className="ratings">5 <span className="star">&#9734;</span></h5>
+                    <h5 className="ratings">5 ⭐</h5>
                     <p><q>I am a big fan of their lemon dessert.</q></p>
     
                 </div>
@@ -30,7 +30,7 @@ function CustomerSays(){
                 </div>
                 <div className="customer-review cthree-review">
                     <h5 className="name">George</h5>
-                    <h5 className="ratings">5 <span className="star">&#9734;</span></h5>
+                    <h5 className="ratings">5 ⭐</h5>
                     <p><q>My kids love this place. We visit this restaurant every Sunday.</q></p>
     
                 </div>
@@ -41,7 +41,7 @@ function CustomerSays(){
                 </div>
                 <div className="customer-review cfour-review">
                     <h5 className="name">Violet</h5>
-                    <h5 className="ratings">5 <span className="star">&#9734;</span></h5>
+                    <h5 className="ratings">5 ⭐</h5>
                     <p><q>I always order salad from this place after a long day at work.</q></p>
     
                 </div>

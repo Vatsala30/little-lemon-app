@@ -2,7 +2,7 @@ import './App.css';
 import HomePage from './HomePage';
 import { Routes,Route } from 'react-router-dom';
 import Chicago from './Chicago';
-import BookingPage from './BookingPage';
+import {BookingPage} from './BookingPage';
 
 function App() {
   return (
