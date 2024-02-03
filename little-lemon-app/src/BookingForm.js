@@ -20,9 +20,10 @@ function BookingForm(props)
 
     function submitHandler(e) {
         e.preventDefault();
-        props.onAdd(formData);
+        props.onSubmitForm(formData);
         console.log("form submitted!");
-        setFormData({resDate: "", resTime: "9:00", guests: 1, occasion: "Birthday" });
+
+        setFormData({resDate: "", resTime: "", guests: 0, occasion: "" });
     }
 
 

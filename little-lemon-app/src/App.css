@@ -403,14 +403,28 @@ footer ul{
 }
 
 #bookings{
-  background-color: #495E57;
-  display: grid;
-  grid-template-columns: repeat(12,1fr);
-  grid-template-rows: 2fr 1fr;
+  background-color: #FFFFFF;
   height: 50vh;
   width: 100vw;
   margin-top:0%;
   margin-bottom: 0%;
+}
+
+#restaurant-table{
+  height: 100%;
+  width: 100%;
+  border-radius: 5%;
+  
+  
+}
+
+#restaurant-table img{
+  border-radius: 5%;
+  height: inherit;
+  width: 100%;
+  opacity: 100%;
+  
+  
 }
 
 

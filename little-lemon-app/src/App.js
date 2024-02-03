@@ -3,6 +3,7 @@ import HomePage from './HomePage';
 import { Routes,Route } from 'react-router-dom';
 import Chicago from './Chicago';
 import {BookingPage} from './BookingPage';
+import ConfirmedBooking from './ConfirmedBooking';
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
     <Route path="/reservations" element={<BookingPage/>}></Route>
     <Route path="/order-online" element={<HomePage/>}></Route>
     <Route path="/login" element={<HomePage/>}></Route>
+    <Route path="/confirmed-booking" element={<ConfirmedBooking/>}></Route>
   </Routes>
   
     

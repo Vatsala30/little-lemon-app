@@ -1,5 +1,6 @@
 import { render, screen } from "@testing-library/react";
 import {BookingPage, initializeTimes, updateTimes} from "./BookingPage";
+import { fetchAPI,submitAPI} from "./mockAPI";
 
 
 
@@ -9,9 +10,9 @@ jest.mock("./BookingForm",()=> (props)=>{
   return <div/>;
 })
 
-const mockBookings = jest.fn();
-jest.mock("./Bookings",()=> (props)=>{
-  mockBookings(props);
+const mockBookingHeader = jest.fn();
+jest.mock("./BookingHeader",()=> ()=>{
+  mockBookingHeader();
   return <div/>;
 })
 
@@ -33,7 +34,27 @@ jest.mock("./Footer",()=> ()=>{
   return <div/>;
 })
 
+//const mockAPI = jest.mock('./mockAPI', () => ( jest.fn()));
+const mockAPI = require("./mockAPI");
+jest.mock('./mockAPI');
+
+
+const mockUsedNavigate = jest.fn();
+jest.mock('react-router-dom', () => ({
+   ...jest.requireActual('react-router-dom'),
+  useNavigate: () => mockUsedNavigate,
+}));
+
+
+
+
 test('Renders the BookingPage heading',  () => {
+//mockAPI.fetchAPI = jest.fn((date) => ["9:00","13:00","20:00"]);
+//mockAPI.submitAPI = jest.fn((formData) => true);
+ mockAPI.fetchAPI.mockReturnValue( ["9:00","13:00","20:00"]);
+ mockAPI.submitAPI.mockReturnValue(true);
+
+  
   render(<BookingPage />);
   const headingElement = screen.getByTestId("header");
     expect(headingElement).toBeInTheDocument();
@@ -41,6 +62,9 @@ test('Renders the BookingPage heading',  () => {
 })
 
 test('Initializes available times',  () => {
+  mockAPI.fetchAPI.mockReturnValue( ["9:00","13:00","20:00"]);
+ mockAPI.submitAPI.mockReturnValue(true);
+  render(<BookingPage />);
   const expectedInitialTimes = ["9:00","13:00","20:00"];
   const actualInitialTimes = initializeTimes();
   expect(actualInitialTimes).toEqual(expectedInitialTimes);
@@ -48,8 +72,10 @@ test('Initializes available times',  () => {
 
 
 test('updateTimes on the basis of date passed', () => {
+  mockAPI.fetchAPI.mockReturnValue( ["9:00","13:00","20:00"]);
+ mockAPI.submitAPI.mockReturnValue(true);
   render(<BookingPage />);
-  const expectedInitialTimes = ["9:00","13:00","20:00","21:00"];
+  const expectedInitialTimes = ["9:00","13:00","20:00"];
   const state = ["9:00","13:00","20:00"];
     const action = { date : "2024-01-30"};
   expect(updateTimes(state, action)).toEqual(expectedInitialTimes);
