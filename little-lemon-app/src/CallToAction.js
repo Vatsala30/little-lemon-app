@@ -12,10 +12,8 @@ function CallToAction(){
             <div id="restaurant-food">
             <img src={require('./images/restauranfood.jpg')} alt="restaurant-food" />
             </div>
-            <div id="reserve-button">
-             <ReserveTable/>
-            </div>
-        </section>
+            <ReserveTable/>
+            </section>
     );
 }
 

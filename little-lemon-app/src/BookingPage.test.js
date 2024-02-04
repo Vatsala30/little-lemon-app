@@ -1,6 +1,7 @@
 import { render, screen } from "@testing-library/react";
 import {BookingPage, initializeTimes, updateTimes} from "./BookingPage";
 import { fetchAPI,submitAPI} from "./mockAPI";
+import BookingForm from "./BookingForm";
 
 
 
@@ -46,20 +47,16 @@ jest.mock('react-router-dom', () => ({
 }));
 
 
-
-
 test('Renders the BookingPage heading',  () => {
 //mockAPI.fetchAPI = jest.fn((date) => ["9:00","13:00","20:00"]);
 //mockAPI.submitAPI = jest.fn((formData) => true);
  mockAPI.fetchAPI.mockReturnValue( ["9:00","13:00","20:00"]);
- mockAPI.submitAPI.mockReturnValue(true);
-
-  
+ mockAPI.submitAPI.mockReturnValue(true); 
   render(<BookingPage />);
   const headingElement = screen.getByTestId("header");
     expect(headingElement).toBeInTheDocument();
     expect(headingElement.textContent).toBe("Reserve a table!!")
-})
+});
 
 test('Initializes available times',  () => {
   mockAPI.fetchAPI.mockReturnValue( ["9:00","13:00","20:00"]);
@@ -68,7 +65,7 @@ test('Initializes available times',  () => {
   const expectedInitialTimes = ["9:00","13:00","20:00"];
   const actualInitialTimes = initializeTimes();
   expect(actualInitialTimes).toEqual(expectedInitialTimes);
-})
+});
 
 
 test('updateTimes on the basis of date passed', () => {
@@ -79,5 +76,7 @@ test('updateTimes on the basis of date passed', () => {
   const state = ["9:00","13:00","20:00"];
     const action = { date : "2024-01-30"};
   expect(updateTimes(state, action)).toEqual(expectedInitialTimes);
-})
+});
+
+
 

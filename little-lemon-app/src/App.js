@@ -16,6 +16,7 @@ function App() {
     <Route path="/order-online" element={<HomePage/>}></Route>
     <Route path="/login" element={<HomePage/>}></Route>
     <Route path="/confirmed-booking" element={<ConfirmedBooking/>}></Route>
+    <Route path="/booking-page" element={<BookingPage/>}></Route>
   </Routes>
   
     
