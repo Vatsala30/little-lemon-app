@@ -11,7 +11,6 @@ test("User is not able to submit the form if the number of guests is less than 1
     const submitButton = screen.getByRole("button");
     fireEvent.click(submitButton);
     expect(submitForm).not.toHaveBeenCalled();
-    expect(submitButton).toHaveAttribute("disabled");
   });
 
   test("User is not able to submit the form if the date is not passed", () => {

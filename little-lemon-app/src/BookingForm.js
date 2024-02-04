@@ -49,7 +49,7 @@ function BookingForm(props)
       <option>Others</option>
    </select>
    </fieldset>
-   <button aria-label="On Click" id="form-btn" type="submit" value="Make Your reservation" disabled={!formData.resDate || formData.resTime==="--- Select a Time ---" ||formData.guests<=0 ||formData.occasion=== "--- Select an Occasion ---"}>Submit </button>
+   <button aria-label="On Click" id="form-btn" type="submit" value="Make Your reservation" disabled={!formData.resDate || formData.resTime==="--- Select a Time ---" ||formData.occasion=== "--- Select an Occasion ---"}>Submit </button>
 
         </form>
     </div>
