@@ -1,3 +1,8 @@
+# This is my capstone project for coursera frontend specialization course
+
+The app is created using html5 semantics, css grid and react concepts such as controlled component, useState hook, useReducer hook , components, props, useNavigate hook, routes, links etc.
+To check out the reserve table functionality, go to Reservations tab. I have added html5 and js validations to disable submitbutton unless all inputs apss validation.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
@@ -68,3 +73,5 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+
